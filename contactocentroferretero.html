@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soldadura y Suministros MW ltda. | Contacto</title>
+    <link rel="stylesheet" href="centroferretero.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="imagenes/MWlogo.png" type="image/png">
+</head>
+
+<body id="inicio">
+
+    <div class="top-bar-cf">
+        <div class="top-bar-contenedor">
+            <div class="top-bar-izq">
+                <a href="https://wa.me/56972991109" target="_blank" rel="noopener noreferrer" class="top-bar-item">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <span>Atención WhatsApp +56 9 7299 1109</span>
+                </a>
+                <span class="top-bar-item">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Lun - Vie: 08:30 - 18:00</span>
+                </span>
+            </div>
+            <div class="top-bar-der">
+                <a href="nosotros.html#ubicacion-seccion" class="top-bar-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Av. Ecuador 290, Chillán</span>
+                </a>
+                <a href="mailto:contabilidad@comercialmw.cl" class="top-bar-item">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>contabilidad@comercialmw.cl</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header-cf">
+        <div class="header-contenedor">
+            <a href="index.html" class="logo-cf-link">
+                <img src="imagenes/MWlogo.png" alt="Logo MW" class="logo-cf-img">
+                <span class="logo-cf-nombre">Soldadura y Suministros</span>
+            </a>
+
+            <div class="header-search-wrapper">
+                <form class="header-search-form" action="index.html#catalogo-seccion" method="get">
+                    <select name="categoria" class="search-select-cat" aria-label="Seleccionar categoría">
+                        <option value="">Todas las Categorías</option>
+                        <option value="soldadura">Equipos de Soldadura y Corte por Plasma</option>
+                        <option value="generadores">Generadores Eléctricos y Motosoldadoras</option>
+                        <option value="proteccion">Protección EPP y Consumibles</option>
+                    </select>
+                    <input type="text" name="q" class="search-input-field" placeholder="Buscar Producto..."
+                        autocomplete="off">
+                    <button type="submit" class="search-submit-btn">Buscar</button>
+                </form>
+            </div>
+
+            <div class="header-actions-wrap">
+                <div class="action-icon-item" id="btn-header-wishlist" title="Lista de Deseos">
+                    <div class="icon-with-badge">
+                        <i class="fa-regular fa-heart"></i>
+                        <span class="icon-badge" id="wishlist-count">0</span>
+                    </div>
+                </div>
+
+                <div class="action-icon-item" id="btn-header-cart" role="button" tabindex="0"
+                    title="Ver cotización" aria-label="Abrir cotización">
+                    <div class="icon-with-badge">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="icon-badge" id="header-cart-count">0</span>
+                    </div>
+                    <span class="cart-amount-text" id="header-cart-total">Cotizar</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav-bar-cf">
+        <div class="nav-contenedor">
+            <div class="categorias-dropdown-btn-wrap">
+                <button type="button" class="btn-todas-las-categorias" id="btn-toggle-categorias">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>Todas Las Categorías</span>
+                    <i class="fa-solid fa-angle-down arrow-icon"></i>
+                </button>
+                <div class="menu-desplegable-categorias">
+                    <ul class="lista-categorias-flotante">
+                        <li><a href="index.html#catalogo-seccion"><i class="fa-solid fa-fire-flame-curved"></i> Equipos de Soldadura</a></li>
+                        <li><a href="index.html#catalogo-seccion"><i class="fa-solid fa-bolt"></i> Corte por Plasma</a></li>
+                        <li><a href="index.html#catalogo-seccion"><i class="fa-solid fa-gas-pump"></i> Generadores Eléctricos</a></li>
+                        <li><a href="index.html#catalogo-seccion"><i class="fa-solid fa-gears"></i> Motosoldadoras Autónomas</a></li>
+                        <li><a href="index.html#catalogo-seccion"><i class="fa-solid fa-shield-halved"></i> Máscaras Fotosensibles</a></li>
+                        <li><a href="index.html#catalogo-seccion"><i class="fa-solid fa-hand-holding-hand"></i> Guantes y EPP Soldador</a></li>
+                        <li><a href="index.html#catalogo-seccion"><i class="fa-solid fa-compact-disc"></i> Discos de Corte y Desbaste CAMEL</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <ul class="nav-enlaces-lista">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#catalogo-seccion">Catálogo de Equipos</a></li>
+                <li class="has-submenu">
+                    <a href="index.html#catalogo-seccion">Líneas de Equipos <i class="fa-solid fa-angle-down"
+                            style="font-size: 0.75rem;"></i></a>
+                    <div class="submenu-desplegable">
+                        <a href="index.html#catalogo-seccion">Soldadoras Inverter y MIG</a>
+                        <a href="index.html#catalogo-seccion">Equipos Corte por Plasma</a>
+                        <a href="index.html#catalogo-seccion">Generadores a Gasolina</a>
+                        <a href="index.html#catalogo-seccion">Motosoldadoras</a>
+                        <a href="index.html#catalogo-seccion">Protección EPP y Abrasivos</a>
+                    </div>
+                </li>
+                <li><a href="contactocentroferretero.html" class="activo">Contáctanos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="nosotros.html#ubicacion-seccion">Ubicación</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <main class="contacto-pagina">
+        <section class="contacto-presentacion">
+            <div class="contacto-presentacion-contenido">
+                <h1>Hablemos de tu<br><span>próximo proyecto.</span></h1>
+                <p>Cuéntanos qué necesitas. Te orientamos con nuestros equipos, cotizaciones y soluciones para tu obra.</p>
+                <a class="contacto-cta" href="https://wa.me/56972991109" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i> Escríbenos por WhatsApp
+                </a>
+            </div>
+            <div class="contacto-visual" aria-hidden="true">
+                <span class="contacto-visual-circulo"></span>
+                <i class="fa-solid fa-headset"></i>
+                <span class="contacto-visual-punto"></span>
+            </div>
+        </section>
+
+        <section class="contacto-canales" aria-labelledby="contacto-canales-titulo">
+            <div class="contacto-seccion-encabezado">
+                <span class="contacto-kicker">Canales de atención</span>
+                <h2 id="contacto-canales-titulo">¿Cómo podemos ayudarte?</h2>
+                <p>Elige la forma más cómoda para contactarnos o visítanos en nuestra sucursal.</p>
+            </div>
+
+            <div class="contacto-tarjetas">
+                <article class="contacto-tarjeta contacto-tarjeta-whatsapp">
+                    <span class="contacto-tarjeta-icono"><i class="fa-brands fa-whatsapp"></i></span>
+                    <span class="contacto-tarjeta-etiqueta">Respuesta directa</span>
+                    <h3>WhatsApp</h3>
+                    <p>Consulta disponibilidad, solicita una cotización o recibe asesoría para elegir tu equipo.</p>
+                    <a href="https://wa.me/56972991109" target="_blank" rel="noopener noreferrer">
+                        +56 9 7299 1109 <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </article>
+
+                <article class="contacto-tarjeta contacto-tarjeta-correo">
+                    <span class="contacto-tarjeta-icono"><i class="fa-regular fa-envelope"></i></span>
+                    <span class="contacto-tarjeta-etiqueta">Empresas y consultas</span>
+                    <h3>Correo electrónico</h3>
+                    <p>Escríbenos por facturación, convenios, licitaciones y consultas generales.</p>
+                    <a href="mailto:contabilidad@comercialmw.cl">
+                        contabilidad@comercialmw.cl <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <article class="contacto-tarjeta contacto-tarjeta-sucursal">
+                    <span class="contacto-tarjeta-icono"><i class="fa-solid fa-location-dot"></i></span>
+                    <span class="contacto-tarjeta-etiqueta">Atención en tienda</span>
+                    <h3>Sucursal Chillán</h3>
+                    <p>Av. Ecuador 290, Chillán. Venta en mesón y despacho.</p>
+                    <a href="nosotros.html#ubicacion-seccion">
+                        Ver ubicación y horario <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section class="contacto-horario">
+            <span class="contacto-horario-icono"><i class="fa-regular fa-clock"></i></span>
+            <div>
+                <span class="contacto-kicker">Te esperamos</span>
+                <h2>Horario de atención</h2>
+            </div>
+            <div class="contacto-horario-detalle">
+                <span><strong>Lunes a viernes</strong> 08:30 – 18:00</span>
+                <span><strong>Sábado</strong> 09:00 – 14:00</span>
+            </div>
+            <a href="nosotros.html#ubicacion-seccion" aria-label="Ver mapa y cómo llegar">
+                Cómo llegar <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </section>
+    </main>
+
+    <footer class="footer-cf-dark">
+        <div class="footer-cf-contenedor">
+            <div class="footer-col">
+                <img src="imagenes/MWlogo.png" alt="Soldadura y Suministros MW ltda." class="footer-logo-blanco">
+                <a href="mailto:contabilidad@comercialmw.cl" class="footer-email-link">contabilidad@comercialmw.cl</a>
+                <a href="https://wa.me/56972991109" class="footer-telefono-texto">+56 9 7299 1109</a>
+                <p class="footer-direccion-texto">Av. Ecuador 290, Chillán.</p>
+            </div>
+            <div class="footer-col footer-links-col">
+                <ul class="footer-links-lista">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#catalogo-seccion">Catálogo de Equipos</a></li>
+                    <li><a href="contactocentroferretero.html">Contáctanos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="nosotros.html#ubicacion-seccion">Ubicación</a></li>
+                </ul>
+                <div class="footer-pagos-wrap">
+                    <i class="fa-brands fa-cc-mastercard"
+                        style="font-size: 1.8rem; color: #eb001b; margin-right: 8px;"></i>
+                    <i class="fa-brands fa-cc-visa" style="font-size: 1.8rem; color: #1a1f71; margin-right: 8px;"></i>
+                    <i class="fa-solid fa-credit-card" style="font-size: 1.8rem; color: #10b981; margin-right: 8px;"
+                        title="Redcompra / Webpay"></i>
+                </div>
+            </div>
+            <div class="footer-col">
+                <div class="footer-mapa-box">
+                    <iframe
+                        src="https://www.google.com/maps?q=Av.+Ecuador+290,+Chillan,+Chile&amp;output=embed"
+                        title="Ubicación de Soldadura y Suministros MW en Chillán" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+            <div class="footer-col footer-siguenos-col">
+                <a href="https://www.instagram.com/indurachillan" target="_blank"
+                    rel="noopener noreferrer" class="btn-siguenos-azul">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>Síguenos</span>
+                </a>
+            </div>
+        </div>
+        <div class="footer-copyright-bar">
+            Soldadura y Suministros MW ltda.
+        </div>
+    </footer>
+
+    <button type="button" class="btn-subir-flotante" id="boton-subir" title="Subir al inicio"
+        aria-label="Subir al inicio">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+
+    <div class="carrito-overlay" id="carrito-overlay" hidden>
+        <aside class="carrito-drawer" id="carrito-drawer" role="dialog" aria-modal="true">
+            <div class="carrito-cabecera">
+                <h2><i class="fa-solid fa-bag-shopping"></i> Tu Cotización</h2>
+                <button type="button" class="cerrar-carrito-btn" id="cerrar-carrito-btn"><i
+                        class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="carrito-cuerpo">
+                <ul class="carrito-items-lista" id="carrito-items"></ul>
+                <div class="carrito-datos-form">
+                    <label for="cliente-carrito">Nombre o Empresa</label>
+                    <input type="text" id="cliente-carrito" placeholder="Ej: Daniel Vega">
+                    <label for="direccion-carrito">Dirección de despacho / Retiro</label>
+                    <textarea id="direccion-carrito" rows="2" placeholder="Dirección en Chillán o retiro"></textarea>
+                </div>
+                <button type="button" class="btn-cotizar-whatsapp" id="enviar-whatsapp" disabled>
+                    <i class="fa-brands fa-whatsapp"></i> Enviar Cotización por WhatsApp
+                </button>
+                <button type="button" class="btn-seguir-comprando" id="btn-seguir-comprando">Seguir viendo productos</button>
+            </div>
+        </aside>
+    </div>
+
+    <script src="sociocentroferretero.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/contactocentroferretero.html", "destination": "/contacto.html", "permanent": true }
+  ]
+}

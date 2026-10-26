@@ -2171,7 +2171,7 @@ a {
 
 .marcas-grid-cf {
     display: grid;
-    grid-template-columns: repeat(9, minmax(0, 1fr));
+    grid-template-columns: repeat(8, minmax(0, 1fr));
     gap: 10px;
     margin-top: 20px;
 }
@@ -2208,7 +2208,7 @@ a {
 
 @media (max-width: 1000px) {
     .marcas-grid-cf {
-        grid-template-columns: repeat(9, minmax(100px, 1fr));
+        grid-template-columns: repeat(8, minmax(100px, 1fr));
         overflow-x: auto;
         padding-bottom: 8px;
     }

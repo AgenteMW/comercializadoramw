@@ -139,10 +139,11 @@ function actualizarCarritoUI() {
 // COTIZACIÓN POR WHATSAPP (A número de MW)
 // --------------------------------------------------------------------------
 // Números de WhatsApp de cada vendedor (formato 569XXXXXXXX).
-// Francisco y Juan Carlos usan el número de Valentina hasta tener los suyos.
+// Si el vendedor tiene un enlace wa.me/message/ (no admite texto), el mensaje se copia y el cliente lo pega.
+// Juan Carlos usa el número de Valentina hasta tener el suyo.
 const VENDEDORES = {
     valentina:  { nombre: 'Valentina Palavecinos (Agente de Ventas)', numero: '56972991109' },
-    francisco:  { nombre: 'Francisco Hoces (Agente de Ventas)', numero: '56972991109' },
+    francisco:  { nombre: 'Francisco Hoces (Agente de Ventas)', link: 'https://wa.me/message/HMSWI7HMKQEDF1' },
     juancarlos: { nombre: 'Juan Carlos Burgos (Agente de Ventas)', numero: '56972991109' }
 };
 
@@ -169,6 +170,13 @@ function enviarCotizacionWhatsApp() {
         'Hola, quisiera solicitar una cotización formal y consultar disponibilidad para estos productos. ¡Muchas gracias!'
     ].join('\n');
 
+    if (vendedor.link) {
+        // Los enlaces wa.me/message/ no permiten mensaje prellenado: se copia al portapapeles.
+        const ventana = window.open(vendedor.link, '_blank', 'noopener,noreferrer');
+        try { navigator.clipboard?.writeText(mensaje); } catch (e) { /* sin portapapeles */ }
+        mostrarToast('Cotización copiada: pégala en el chat de WhatsApp');
+        return ventana;
+    }
     window.open(`https://wa.me/${vendedor.numero}?text=${encodeURIComponent(mensaje)}`, '_blank', 'noopener,noreferrer');
 }
 

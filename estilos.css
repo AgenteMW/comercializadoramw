@@ -2795,3 +2795,7 @@ body.modo-noche .btn-carrito-flotante {
 .vendedor-btn-sec { background: #ffffff; color: #031a3c; border: 1px solid #cbd5e1; }
 .vendedor-btn-sec:hover { background: #f1f5f9; }
 @media (max-width: 860px) { .vendedores-grid { grid-template-columns: 1fr; } .vendedor-card { flex-direction: row; text-align: left; align-items: center; flex-wrap: wrap; } .vendedor-acciones { flex-basis: 100%; } }
+
+/* Selector de vendedor en el carrito */
+#vendedor-carrito { width: 100%; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 8px; font-family: inherit; font-size: 0.9rem; background: #ffffff; color: #1f2937; margin-bottom: 12px; cursor: pointer; }
+#vendedor-carrito:focus { outline: none; border-color: #008846; box-shadow: 0 0 0 3px rgba(0, 136, 70, 0.15); }

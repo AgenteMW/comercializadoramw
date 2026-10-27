@@ -138,8 +138,18 @@ function actualizarCarritoUI() {
 // --------------------------------------------------------------------------
 // COTIZACIÓN POR WHATSAPP (A número de MW)
 // --------------------------------------------------------------------------
+// Números de WhatsApp de cada vendedor (formato 569XXXXXXXX).
+// Francisco y Juan Carlos usan el número de sala hasta tener los suyos.
+const VENDEDORES = {
+    valentina:  { nombre: 'Valentina Palavecinos (Sala)', numero: '56972991109' },
+    francisco:  { nombre: 'Francisco Hoces (Terreno)', numero: '56972991109' },
+    juancarlos: { nombre: 'Juan Carlos Burgos (Terreno)', numero: '56972991109' }
+};
+
 function enviarCotizacionWhatsApp() {
     if (carrito.length === 0) return;
+
+    const vendedor = VENDEDORES[document.getElementById('vendedor-carrito')?.value] || VENDEDORES.valentina;
 
     const cliente = document.getElementById('cliente-carrito')?.value.trim() || 'Particular / No especificado';
     const direccion = document.getElementById('direccion-carrito')?.value.trim() || 'Retiro en sucursal (Av. Ecuador 290B, Chillán)';
@@ -151,6 +161,7 @@ function enviarCotizacionWhatsApp() {
         '*SOLICITUD DE COTIZACIÓN - SOLDADURA Y SUMINISTROS MW*',
         `*Cliente:* ${cliente}`,
         `*Dirección / Modalidad:* ${direccion}`,
+        `*Vendedor:* ${vendedor.nombre}`,
         '',
         '*Productos a Cotizar:*',
         detalleProductos,
@@ -158,7 +169,7 @@ function enviarCotizacionWhatsApp() {
         'Hola, quisiera solicitar una cotización formal y consultar disponibilidad para estos productos. ¡Muchas gracias!'
     ].join('\n');
 
-    window.open(`https://wa.me/56972991109?text=${encodeURIComponent(mensaje)}`, '_blank', 'noopener,noreferrer');
+    window.open(`https://wa.me/${vendedor.numero}?text=${encodeURIComponent(mensaje)}`, '_blank', 'noopener,noreferrer');
 }
 
 // --------------------------------------------------------------------------

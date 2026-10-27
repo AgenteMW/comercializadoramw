@@ -139,11 +139,11 @@ function actualizarCarritoUI() {
 // COTIZACIÓN POR WHATSAPP (A número de MW)
 // --------------------------------------------------------------------------
 // Números de WhatsApp de cada vendedor (formato 569XXXXXXXX).
-// Francisco y Juan Carlos usan el número de sala hasta tener los suyos.
+// Francisco y Juan Carlos usan el número de Valentina hasta tener los suyos.
 const VENDEDORES = {
-    valentina:  { nombre: 'Valentina Palavecinos (Sala)', numero: '56972991109' },
-    francisco:  { nombre: 'Francisco Hoces (Terreno)', numero: '56972991109' },
-    juancarlos: { nombre: 'Juan Carlos Burgos (Terreno)', numero: '56972991109' }
+    valentina:  { nombre: 'Valentina Palavecinos (Agente de Ventas)', numero: '56972991109' },
+    francisco:  { nombre: 'Francisco Hoces (Agente de Ventas)', numero: '56972991109' },
+    juancarlos: { nombre: 'Juan Carlos Burgos (Agente de Ventas)', numero: '56972991109' }
 };
 
 function enviarCotizacionWhatsApp() {

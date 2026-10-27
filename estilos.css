@@ -2774,3 +2774,24 @@ body.modo-noche .btn-carrito-flotante {
 .dest-punto { width: 9px; height: 9px; border-radius: 50%; border: 0; padding: 0; cursor: pointer; background: rgba(255,255,255,0.45); transition: all 0.3s ease; }
 .dest-punto.activo { width: 22px; border-radius: 6px; background: #ffffff; }
 @media (max-width: 600px) { .banner-destacados { min-height: 330px; } .dest-slide { padding: 24px 20px 40px; } .dest-slide .dest-img { width: 44%; } }
+
+/* Equipo de ventas */
+.seccion-vendedores { margin: 10px 0 44px; }
+.seccion-vendedores-inicio { max-width: 1260px; margin: 10px auto 50px; padding: 0 20px; }
+.vendedores-encabezado { text-align: center; margin-bottom: 24px; }
+.vendedores-kicker { display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #008846; margin-bottom: 6px; }
+.vendedores-encabezado h2 { margin: 0 0 8px; font-size: 1.6rem; color: #031a3c; }
+.vendedores-encabezado p { margin: 0; color: #4b5563; }
+.vendedores-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.vendedor-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border-top: 4px solid #008846; }
+.vendedor-avatar { width: 76px; height: 76px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.5rem; color: #ffffff; background: linear-gradient(135deg, #031a3c 0%, #008846 100%); }
+.vendedor-nombre { margin: 0 0 4px; font-size: 1.1rem; color: #031a3c; }
+.vendedor-cargo { display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 600; color: #008846; background: #e7f4ec; padding: 4px 10px; border-radius: 999px; }
+.vendedor-mail { display: block; margin-top: 8px; font-size: 0.85rem; color: #4b5563; text-decoration: none; word-break: break-all; }
+.vendedor-mail:hover { color: #008846; }
+.vendedor-acciones { display: flex; gap: 8px; width: 100%; margin-top: auto; }
+.vendedor-btn { flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 10px 12px; border-radius: 8px; background: #008846; color: #ffffff; font-weight: 700; font-size: 0.88rem; text-decoration: none; transition: background 0.2s ease; }
+.vendedor-btn:hover { background: #006e38; }
+.vendedor-btn-sec { background: #ffffff; color: #031a3c; border: 1px solid #cbd5e1; }
+.vendedor-btn-sec:hover { background: #f1f5f9; }
+@media (max-width: 860px) { .vendedores-grid { grid-template-columns: 1fr; } .vendedor-card { flex-direction: row; text-align: left; align-items: center; flex-wrap: wrap; } .vendedor-acciones { flex-basis: 100%; } }

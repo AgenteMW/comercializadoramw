@@ -141,9 +141,9 @@ function actualizarCarritoUI() {
 // Números de WhatsApp de cada vendedor (formato 569XXXXXXXX).
 // Si el vendedor tiene un enlace wa.me/message/ (no admite texto), el mensaje se copia y el cliente lo pega.
 const VENDEDORES = {
-    valentina:  { nombre: 'Valentina Palavecinos (Agente de Ventas)', numero: '56972991109' },
-    francisco:  { nombre: 'Francisco Hoces (Agente de Ventas)', numero: '56971996042' },
-    juancarlos: { nombre: 'Juan Carlos Burgos (Agente de Ventas)', numero: '56977493783' }
+    valentina:  { nombre: 'Valentina Palavecinos (Agente de Ventas)', saludo: 'Valentina', numero: '56972991109' },
+    francisco:  { nombre: 'Francisco Hoces (Agente de Ventas)', saludo: 'Francisco', numero: '56971996042' },
+    juancarlos: { nombre: 'Juan Carlos Burgos (Agente de Ventas)', saludo: 'Juan Carlos', numero: '56977493783' }
 };
 
 function enviarCotizacionWhatsApp() {
@@ -151,22 +151,21 @@ function enviarCotizacionWhatsApp() {
 
     const vendedor = VENDEDORES[document.getElementById('vendedor-carrito')?.value] || VENDEDORES.valentina;
 
-    const cliente = document.getElementById('cliente-carrito')?.value.trim() || 'Particular / No especificado';
-    const direccion = document.getElementById('direccion-carrito')?.value.trim() || 'Retiro en sucursal (Av. Ecuador 290B, Chillán)';
+    const cliente = document.getElementById('cliente-carrito')?.value.trim() || 'No indicado';
+    const direccion = document.getElementById('direccion-carrito')?.value.trim() || 'Por confirmar';
     const detalleProductos = carrito.map(item =>
         `• ${item.cantidad}x ${item.nombre}`
     ).join('\n');
 
     const mensaje = [
-        '*SOLICITUD DE COTIZACIÓN - SOLDADURA Y SUMINISTROS MW*',
-        `*Cliente:* ${cliente}`,
-        `*Dirección / Modalidad:* ${direccion}`,
-        `*Vendedor:* ${vendedor.nombre}`,
+        `Hola ${vendedor.saludo}, te escribo desde la página agentemw.cl. Quiero cotizar y consultar disponibilidad de:`,
         '',
-        '*Productos a Cotizar:*',
         detalleProductos,
         '',
-        'Hola, quisiera solicitar una cotización formal y consultar disponibilidad para estos productos. ¡Muchas gracias!'
+        `*Nombre o empresa:* ${cliente}`,
+        `*Despacho o retiro:* ${direccion}`,
+        '',
+        'Gracias.'
     ].join('\n');
 
     if (vendedor.link) {

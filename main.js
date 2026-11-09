@@ -232,7 +232,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (btnAgregar) {
             const card = btnAgregar.closest('.producto-card-cf');
             if (card) {
-                const nombre = card.dataset.nombre || card.querySelector('.producto-card-titulo')?.textContent.trim();
+                const nombreBase = card.dataset.nombre || card.querySelector('.producto-card-titulo')?.textContent.trim();
+                const variante = card.querySelector('.producto-card-variante')?.value;
+                const nombre = variante ? `${nombreBase} – ${variante}` : nombreBase;
                 const img = card.querySelector('img')?.getAttribute('src');
                 agregarAlCarrito(nombre, 0, img);
             }
@@ -330,7 +332,8 @@ document.addEventListener('DOMContentLoaded', () => {
             cards.forEach(prod => {
                 const nombre = normalizar(prod.dataset.nombre);
                 const cat = (prod.dataset.categoria || '').toLowerCase();
-                const desc = normalizar(prod.querySelector('.producto-card-desc')?.textContent);
+                const desc = normalizar(prod.querySelector('.producto-card-desc')?.textContent) + ' ' +
+                    normalizar(prod.querySelector('.producto-card-variante')?.textContent);
                 const coincideTexto = !query || nombre.includes(query) || desc.includes(query) || cat.includes(query);
                 const coincideCatProd = !categoriaFiltro || cat === categoriaFiltro || catBloque === categoriaFiltro;
 

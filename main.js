@@ -140,11 +140,10 @@ function actualizarCarritoUI() {
 // --------------------------------------------------------------------------
 // Números de WhatsApp de cada vendedor (formato 569XXXXXXXX).
 // Si el vendedor tiene un enlace wa.me/message/ (no admite texto), el mensaje se copia y el cliente lo pega.
-// Juan Carlos usa el número de Valentina hasta tener el suyo.
 const VENDEDORES = {
     valentina:  { nombre: 'Valentina Palavecinos (Agente de Ventas)', numero: '56972991109' },
-    francisco:  { nombre: 'Francisco Hoces (Agente de Ventas)', link: 'https://wa.me/message/HMSWI7HMKQEDF1' },
-    juancarlos: { nombre: 'Juan Carlos Burgos (Agente de Ventas)', numero: '56972991109' }
+    francisco:  { nombre: 'Francisco Hoces (Agente de Ventas)', numero: '56971996042' },
+    juancarlos: { nombre: 'Juan Carlos Burgos (Agente de Ventas)', numero: '56977493783' }
 };
 
 function enviarCotizacionWhatsApp() {
